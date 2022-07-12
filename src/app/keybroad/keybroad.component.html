@@ -1,0 +1,27 @@
+<div class="mainContainer">
+  <!-- 讀卡機 -->
+  <div class="cardReaderArea">
+    <p class="title title1">插入讀卡機</p>
+    <div class="cardReader">
+      <i class="fa-solid fa-cash-register"></i>
+      <input #cardReaderInput type="text" class="cardReaderInput" [(ngModel)]="CRIValue">
+    </div>
+  </div>
+  <!-- 金融卡密碼 -->
+  <div class="cardPasswordArea">
+    <p class="title title2">金融卡密碼</p>
+    <div class="cardPassword">
+      <i class="fa-solid fa-lock-open"></i>
+      <input #cardPasswordInput type="text" class="cardPasswordInput" [(ngModel)]="CPIValue" placeholder="請輸入6~12碼">
+    </div>
+  </div>
+  <!-- 鍵盤區 -->
+  <div  class="numberArea">
+    <div class="numSelf" *ngFor="let el of numArr" (click)="do(el)">{{ el }}</div>
+  </div>
+  <!-- 登入 -->
+  <div class="loginBtnArea">
+    <button class="loginBtn">登入</button>
+  </div>
+
+</div>
